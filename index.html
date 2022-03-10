@@ -80,6 +80,8 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+
+    
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -91,7 +93,41 @@
         <div class="carousel-item active" style="background-image: url(assets/img/slide/cover\ frame.png)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animated fadeInDown">Light Up Frames</h2>
+              <h2 >We sell <span data-typed-items="frames, prints, illustrations"></span>
+              <strong class="my_typed"></strong>
+              </h2>
+              
+              <script>
+
+                // Hero typed
+                // if ($('.typed').length) {
+                //   var typed_strings = $(".typed").data('typed-items');
+                //   typed_strings = typed_strings.split(',')
+                //   new Typed('.typed', {
+                //     strings: typed_strings,
+                //     loop: true,
+                //     typeSpeed: 50,
+                //     backSpeed: 10,
+                //     backDelay: 2000
+                //   });
+                // }
+                
+                if ((".my_typed").length == 1) {
+
+                  var typed_strings = $(".data-typed-items").text();
+
+                  var typed = new Typed(".my_typed", {
+                    strings: typed_strings.split(", "),
+                    loop: true,
+                    typeSpeed: 50,
+                    backSpeed: 10,
+                    backDelay: 2000
+
+                  });
+                }
+
+              </script>
+              
               <p class="animated fadeInUp">Brighten your decor with personalised light up frames.</p>
               <a href="#portfolio" class="btn-get-started animated fadeInUp scrollto">Shop Now</a>
               
@@ -867,6 +903,7 @@
                   </div>
                 </div>
               </div> <!-- End Member Item -->
+              
 
               <!--
 
@@ -1109,6 +1146,10 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -1116,6 +1157,9 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

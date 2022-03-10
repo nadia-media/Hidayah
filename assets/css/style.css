@@ -1150,6 +1150,10 @@ section {
   color: #fff;
   border-radius: 4px;
 }
+.data-typed-items {
+  display: none;
+
+}
 .contact .php-email-form button[type=submit]:hover {
   background: #5697d0;
 }

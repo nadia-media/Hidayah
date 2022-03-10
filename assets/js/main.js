@@ -18,6 +18,7 @@
       return document.querySelector(el)
     }
   }
+    
 
   /**
    * Easy event listener function
@@ -160,6 +161,7 @@
       heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
   });
 
+  
   /**
    * Initiate glightbox 
    */
@@ -210,6 +212,8 @@
     }
 
   });
+
+
 
   /**
    * Initiate portfolio lightbox 
