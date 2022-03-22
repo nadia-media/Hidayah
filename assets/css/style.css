@@ -13,6 +13,25 @@ body {
   color: #444444;
 }
 
+.text-slider-items {
+  display: none;
+}
+
+.heading {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.heading h1 {
+  color: limegreen;
+  font-size: 70px;
+}
+
+.heading h3 {
+  color: black;
+  font-size: 20px;
+}
+
 a {
   color: #428bca;
   text-decoration: none;

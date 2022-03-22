@@ -39,9 +39,71 @@
   ======================================================== -->
 </head>
 
+
+
+
+
 <body>
 
   <!-- ======= Header ======= -->
+
+  <div class="heading">
+    <h1>GeeksforGeeks</h1>
+    <h3>
+        <span class="text-slider-items">
+            We Sell
+          
+        </span>
+        
+        <span class="text-slider-items">
+          Light up Frames,
+         
+      </span>
+
+      <span class="text-slider-items">
+        Prints,
+    </span>
+
+    <span class="text-slider-items">
+      Bundles
+  </span>
+
+        <strong class="text-slider"></strong>
+        <!-- classes "text-slider" 
+        and "text-slider-items"
+        for typed.js script -->
+    </h3>
+</div>
+
+
+<script src="./typed.js-master/lib/typed.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/
+jquery/3.5.1/jquery.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>"
+
+<script>
+	if ($(".text-slider").length == 1) {
+		var typed_strings = $(".text-slider-items").text();
+		var typed = new Typed(".text-slider", {
+			strings: typed_strings.split(", "),
+			typeSpeed: 50,
+			loop: true,
+			backDelay: 900,
+			backSpeed: 30,
+		});
+	}
+</script>
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -96,7 +158,8 @@
               <h2 >We sell <span data-typed-items="frames, prints, illustrations"></span>
               <strong class="my_typed"></strong>
               </h2>
-              
+
+
               <script>
 
                 // Hero typed
@@ -889,6 +952,12 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
   
 
 
