@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-  color: #6aa3d5;
+  color: black;
   text-decoration: none;
 }
 
@@ -456,7 +456,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #e3c89c;
 }
 #hero .btn-get-started:hover {
-  background: #5697d0;
+  background: black;
 }
 @media (max-width: 768px) {
   #hero h2 {
@@ -800,7 +800,7 @@ section {
   color: #fff;
 }
 .cta .cta-btn:hover {
-  background: #5697d0;
+  background: #e3c89c;
 }
 
 /*--------------------------------------------------------------
@@ -1101,7 +1101,7 @@ section {
 }
 .contact .info i {
   font-size: 48px;
-  color: #92bce0;
+  color: #e3c89c;
   margin-bottom: 15px;
 }
 .contact .info h4 {
@@ -1190,7 +1190,7 @@ section {
 
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #5697d0;
+  background: black;
 }
 @media (max-width: 1024px) {
   .contact .php-email-form {
