@@ -1256,6 +1256,70 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Information Section
+--------------------------------------------------------------*/
+
+
+
+.information  p {
+  color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 20px;
+  
+}
+@media (max-width: 768px) {
+  .information h3 {
+    font-size: 28px;
+  }
+}
+.information  .nav-pills {
+  border-bottom: 1px solid rgba(var(--color-secondary-rgb), 0.2);
+}
+.information  .nav-pills li + li {
+  margin-left: 40px;
+}
+.information  .nav-link {
+  background: none;
+  font-size: 18px;
+  font-weight: 400;
+  color:#444444;
+  padding: 12px 0;
+  margin-bottom: -2px;
+  border-radius: 0;
+  font-family: var(--font-secondary);
+}
+.information  .nav-link.active {
+  color: var(--color-primary);
+  background: none;
+  border-bottom: 3px solid var(--color-primary);
+}
+@media (max-width: 575px) {
+  .information  .nav-link {
+    font-size: 16px;
+  }
+}
+.information  .tab-content  {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+.information  .tab-content i {
+  font-size: 22px;
+  line-height: 0;
+  margin-right: 8px;
+  color: var(--color-primary);
+}
+
+.information .nav-link:hover {
+  background: #e3c89c;
+  color: #fff;
+  border-radius: 3px;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
