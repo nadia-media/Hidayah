@@ -1262,27 +1262,30 @@ section {
 
 
 .information  p {
-  color: var(--color-secondary);
+  color: #394047;
   font-family: var(--font-secondary);
   font-weight: 300;
-  font-size: 32px;
+  font-size: 15px;
   margin-bottom: 20px;
   
 }
 @media (max-width: 768px) {
   .information h3 {
     font-size: 28px;
+    
   }
 }
 .information  .nav-pills {
   border-bottom: 1px solid rgba(var(--color-secondary-rgb), 0.2);
+  text-transform: uppercase;
 }
+
 .information  .nav-pills li + li {
   margin-left: 40px;
 }
 .information  .nav-link {
   background: none;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   color:#444444;
   padding: 12px 0;
@@ -1305,19 +1308,24 @@ section {
   margin: 0;
   font-weight: 700;
   color: var(--color-secondary);
+  
 }
 .information  .tab-content i {
   font-size: 22px;
   line-height: 0;
   margin-right: 8px;
   color: var(--color-primary);
+  
 }
 
 .information .nav-link:hover {
   background: #e3c89c;
   color: #fff;
   border-radius: 3px;
+  text-transform: uppercase;
 }
+
+
 
 /*--------------------------------------------------------------
 # Footer
