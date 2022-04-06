@@ -94,7 +94,7 @@
             <div class="small mb-1">BundleBee Box</div>
             <h1 class="display-5 fw-bolder">Personalised Wedding Photo Light up Frame</h1>
             <div class="fs-5 mb-5">
-              <span>£24.99 - £28.99</span>
+              <span id="price_shown">£24.99 - £28.99</span>
             </div>
             <p class="lead"></p>
 
@@ -104,16 +104,34 @@
             <div class="col-lg-6 col-md-12 col-12">
               <p class="pt-3 pb-2">Style</p>
               <h2>
-                <script>
-                  document.write(price);
-                </script>
+               
               </h2>
     
-              <select class="my-3">
+              <select class="my-3" id="item_price" name="item_price">
                 <option value="">Select a style</option>
-                <option value="">Frame only (£24.99)</option>
-                <option value="">Bundle (£28.99)</option>
+                <option value="">Frame only</option>
+                <option value="">Bundle</option>
               </select>
+
+              <script>
+                function setPrice(){
+                  var dropdown = document.getElementById("item_price");
+                  var defaultValue = "£24.99 - £28.99";
+                  var selectedPrice = dropdown.options[dropdown.selectedIndex].value;
+                  if (dropdown.selectedIndex == 0){
+                    document.getElementById('price_shown').innerHTML = defaultValue;
+                  } else if (dropdown.selectedIndex == 1){
+                    document.getElementById('price_shown').innerHTML = "£24.99";
+
+                  } else if (dropdown.selectedIndex == 2){
+                    document.getElementById('price_shown').innerHTML = "£28.99";
+                  }
+                }
+
+                document.getElementById('item_price').onchange = setPrice;
+
+                // document.write(price);
+              </script>
             </div>
 
              <!-- End Product details -->
