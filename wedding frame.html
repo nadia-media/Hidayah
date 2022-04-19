@@ -102,16 +102,14 @@
             
      <!-- Product details -->
             <div class="col-lg-6 col-md-12 col-12">
-              <p class="pt-3 pb-2">Style</p>
-              <h2>
-               
-              </h2>
+              
     
               <select class="my-3" id="item_price" name="item_price">
                 <option value="">Select a style</option>
                 <option value="">Frame only</option>
                 <option value="">Bundle</option>
               </select>
+
 
               <script>
                 function setPrice(){
@@ -131,26 +129,55 @@
                 document.getElementById('item_price').onchange = setPrice;
 
                 // document.write(price);
+
               </script>
             </div>
+
+            <div class="col-lg-6 col-md-12 col-12">
+              
+    
+              <select class="my-3" id="item_design" name="item_design">
+                <option value="">Select a design</option>
+                <option value="">Design 1</option>
+                <option value="">Design 2</option>
+                <option value="">Design 3</option>
+              </select>
+
+              
+            </div>
+
+            <select class="form-control" id="frame_quantity" name="frame_quantity" style="max-width: 3rem">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+          </select>
+
+
+            
+
+            <br>
+
+
+            <div class="d-flex">
+              <button class="btn btn-outline-dark flex-shrink-0" type="button">
+              <i class="bi-cart-fill me-1"></i>
+              Add to cart
+              </button>
+           </div>
 
              <!-- End Product details -->
     
 
 
-            <div class="d-flex">
-              <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-              <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                <i class="bi-cart-fill me-1"></i>
-                Add to cart
-              </button>
-            </div>
-          </div>
-        </div>
+            
 
 
       </div>
     </section> <!-- End Product Section -->
+
+
 
 
     
@@ -373,6 +400,9 @@
       <script>
         $('[data-filter=".filter-description"]').trigger('click');
       </script>
+
+
+
 
   </body> 
 
