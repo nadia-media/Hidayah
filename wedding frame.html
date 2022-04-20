@@ -90,6 +90,31 @@
       <div class="container px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
           <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="assets/img/portfolio/wedding frame.png" alt="..." /></div>
+          <section class="item-details section">
+              <div class="container">
+                  <div class="top-area">
+                      <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="product-images">
+                                <main id="gallery">
+                                    <div class="main-img">
+                                        <img src="assets/img/information/wedding frame 1.png" id="current" alt="#">
+                                    </div>
+                                    <div class="images">
+                                        <img src="assets/img/information/wedding frame 1.png" class="img" alt="#">
+                                        <img src="assets/img/information/wedding frame 2.png"  class="img" alt="#">
+                                        <img src="assets/img/information/wedding frame 3.png" class="img" alt="#">
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        
+                        </section>
+
           <div class="col-md-6">
             <div class="small mb-1">BundleBee Box</div>
             <h1 class="display-5 fw-bolder">Personalised Wedding Photo Light up Frame</h1>
@@ -97,7 +122,6 @@
               <span id="price_shown">£24.99 - £28.99</span>
             </div>
             <p class="lead"></p>
-
 
             
      <!-- Product details -->
@@ -168,13 +192,10 @@
            </div>
 
              <!-- End Product details -->
-    
 
 
             
-
-
-      </div>
+ 
     </section> <!-- End Product Section -->
 
 
@@ -400,6 +421,26 @@
       <script>
         $('[data-filter=".filter-description"]').trigger('click');
       </script>
+
+      <script type="text/javascript">
+              const current = document.getElementById("current");
+              const opacity = 0.6;
+              const imgs = document.querySelectorAll(".img");
+              imgs.forEach(img => {
+            img.addEventListener("click", (e) => {
+            //reset opacity
+            imgs.forEach(img => {
+                img.style.opacity = 1;
+            });
+            current.src = e.target.src;
+            //adding class 
+            //current.classList.add("fade-in");
+            //opacity
+            e.target.style.opacity = opacity;
+        });
+        });
+            </script>
+         
 
 
 
