@@ -1,0 +1,99 @@
+<link href="file:///C:/Users/Nadia/Documents/Development/Templates/Hidayah/test2.css" rel="stylesheet">
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="watchBackground">
+            <div class="gradients">
+                <div class="gradient second" color="blue"></div>
+                <div class="gradient" color="red"></div>
+                <div class="gradient" color="green"></div>
+                <div class="gradient" color="orange"></div>
+            </div>
+            <h1 class="nike">SMT</h1><a href="#" class="share"><i class="fas fa-share-alt"></i></a> <img src="assets/img/information/wedding frame 4.png" alt="" class="watch show" color="blue"> <img src="assets/img/information/wedding frame 1.png" alt="" class="watch" color="red"> <img src="assets/img/information/wedding frame 2.png" alt="" class="watch" color="green"> <img src="assets/img/information/wedding frame 3.png" alt="" class="watch" color="orange">
+        </div>
+        <div class="info">
+            <div class="color-container">
+                <select class="single-option-selector" data-option="option1" required="" name="name0" id="bcpo-select-option-0"><option value="">Select a Design</option><option value="Blue" class="">Design 1</option><option value="Lilac" class="">Design 2</option><option value="Pink" class="">Design 3</option></select>
+                <div class="colors"> <span class="color active" color="blue" w-name="Select a Design"></span> <span class="color" primary="#484f69" color="red" w-name="Design 1"></span> <span class="color" primary="#7a9c89" color="green" w-name="Design 2"></span> <span class="color" primary="#caaea7" color="orange" w-name="Design 3"></span> </div>
+            </div>
+            <div class="ratings-container">
+                <div class="rating" style="color:#db6777;"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i> </div>
+            </div>
+            <div class="watch-name"> <span>Select a Design</span> </div>
+        </div>
+    </div>
+
+    
+
+<script>
+    
+    const ratings = document.querySelectorAll('.rating');
+const colors = document.querySelectorAll('.color');
+const watchs = document.querySelectorAll('.watch');
+const gradients = document.querySelectorAll('.gradient');
+const watchBg = document.querySelector('.watchBackground');
+
+let prevColor = "blue";
+let animationEnd = true;
+
+function changeColor(){
+if(!animationEnd) return;
+let primary = this.getAttribute('primary');
+let color = this.getAttribute('color');
+let watch_name = this.getAttribute('w-name');
+let watch = document.querySelector(`.watch[color="${color}"]`);
+let gradient = document.querySelector(`.gradient[color="${color}"]`);
+let prevGradient = document.querySelector(`.gradient[color="${prevColor}"]`);
+
+document.querySelector('.rating').style.color = primary;
+
+document.querySelector('.watch-name span').innerHTML = watch_name;
+
+if(color == prevColor) return;
+
+colors.forEach(c => c.classList.remove('active'));
+this.classList.add('active');
+
+document.documentElement.style.setProperty('--primary', primary);
+
+watchs.forEach(s => s.classList.remove('show'));
+watch.classList.add('show');
+
+gradients.forEach(g => g.classList.remove('first', 'second'));
+gradient.classList.add('first');
+prevGradient.classList.add('second');
+
+prevColor = color;
+animationEnd = false;
+
+gradient.addEventListener('animationend', () => {
+animationEnd = true;
+})
+}
+colors.forEach(c => c.addEventListener('click', changeColor));
+
+let x = window.matchMedia("(max-width: 1000px)");
+
+function changeHeight(){
+if(x.matches){
+let watchHeight = watchs[0].offsetHeight;
+watchBg.style.height = `${watchHeight * 0.9}px`;
+}
+else{
+watchBg.style.height = "453px";
+}
+}
+
+changeHeight();
+
+window.addEventListener('resize', changeHeight);
+</script>
+
+
+</div>
+
+
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
+<script src="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></script>
