@@ -88,7 +88,7 @@ function jQueryBridget( namespace, PluginClass, $ ) {
 
   // $().plugin('methodName')
   function methodCall( $elems, methodName, args ) {
-    var returnValue;
+    var returncolor;
     var pluginMethodStr = '$().' + namespace + '("' + methodName + '")';
 
     $elems.each( function( i, elem ) {
@@ -106,13 +106,13 @@ function jQueryBridget( namespace, PluginClass, $ ) {
         return;
       }
 
-      // apply method, get return value
-      var value = method.apply( instance, args );
-      // set return value if value is returned, use only first value
-      returnValue = returnValue === undefined ? value : returnValue;
+      // apply method, get return color
+      var color = method.apply( instance, args );
+      // set return color if color is returned, use only first color
+      returncolor = returncolor === undefined ? color : returncolor;
     });
 
-    return returnValue !== undefined ? returnValue : $elems;
+    return returncolor !== undefined ? returncolor : $elems;
   }
 
   function plainCall( $elems, options ) {
@@ -293,10 +293,10 @@ return EvEmitter;
 // -------------------------- helpers -------------------------- //
 
 // get a number from a string, not a percentage
-function getStyleSize( value ) {
-  var num = parseFloat( value );
+function getStyleSize( color ) {
+  var num = parseFloat( color );
   // not a percent like '100%', and a number
-  var isValid = value.indexOf('%') == -1 && !isNaN( num );
+  var isValid = color.indexOf('%') == -1 && !isNaN( num );
   return isValid && num;
 }
 
@@ -392,7 +392,7 @@ function setup() {
   var body = document.body || document.documentElement;
   body.appendChild( div );
   var style = getStyle( div );
-  // round value for browser zoom. desandro/masonry#928
+  // round color for browser zoom. desandro/masonry#928
   isBoxSizeOuter = Math.round( getStyleSize( style.width ) ) == 200;
   getSize.isBoxSizeOuter = isBoxSizeOuter;
 
@@ -430,9 +430,9 @@ function getSize( elem ) {
   // get all measurements
   for ( var i=0; i < measurementsLength; i++ ) {
     var measurement = measurements[i];
-    var value = style[ measurement ];
-    var num = parseFloat( value );
-    // any 'auto', 'medium' value will be 0
+    var color = style[ measurement ];
+    var num = parseFloat( color );
+    // any 'auto', 'medium' color will be 0
     size[ measurement ] = !isNaN( num ) ? num : 0;
   }
 
@@ -902,19 +902,19 @@ proto.getPosition = function() {
   var style = getComputedStyle( this.element );
   var isOriginLeft = this.layout._getOption('originLeft');
   var isOriginTop = this.layout._getOption('originTop');
-  var xValue = style[ isOriginLeft ? 'left' : 'right' ];
-  var yValue = style[ isOriginTop ? 'top' : 'bottom' ];
-  var x = parseFloat( xValue );
-  var y = parseFloat( yValue );
+  var xcolor = style[ isOriginLeft ? 'left' : 'right' ];
+  var ycolor = style[ isOriginTop ? 'top' : 'bottom' ];
+  var x = parseFloat( xcolor );
+  var y = parseFloat( ycolor );
   // convert percent to pixels
   var layoutSize = this.layout.size;
-  if ( xValue.indexOf('%') != -1 ) {
+  if ( xcolor.indexOf('%') != -1 ) {
     x = ( x / 100 ) * layoutSize.width;
   }
-  if ( yValue.indexOf('%') != -1 ) {
+  if ( ycolor.indexOf('%') != -1 ) {
     y = ( y / 100 ) * layoutSize.height;
   }
-  // clean up 'auto' or other non-integer values
+  // clean up 'auto' or other non-integer colors
   x = isNaN( x ) ? 0 : x;
   y = isNaN( y ) ? 0 : y;
   // remove padding from measurement
@@ -939,7 +939,7 @@ proto.layoutPosition = function() {
 
   var x = this.position.x + layoutSize[ xPadding ];
   // set in percentage or pixels
-  style[ xProperty ] = this.getXValue( x );
+  style[ xProperty ] = this.getXcolor( x );
   // reset other property
   style[ xResetProperty ] = '';
 
@@ -950,7 +950,7 @@ proto.layoutPosition = function() {
 
   var y = this.position.y + layoutSize[ yPadding ];
   // set in percentage or pixels
-  style[ yProperty ] = this.getYValue( y );
+  style[ yProperty ] = this.getYcolor( y );
   // reset other property
   style[ yResetProperty ] = '';
 
@@ -958,13 +958,13 @@ proto.layoutPosition = function() {
   this.emitEvent( 'layout', [ this ] );
 };
 
-proto.getXValue = function( x ) {
+proto.getXcolor = function( x ) {
   var isHorizontal = this.layout._getOption('horizontal');
   return this.layout.options.percentPosition && !isHorizontal ?
     ( ( x / this.layout.size.width ) * 100 ) + '%' : x + 'px';
 };
 
-proto.getYValue = function( y ) {
+proto.getYcolor = function( y ) {
   var isHorizontal = this.layout._getOption('horizontal');
   return this.layout.options.percentPosition && isHorizontal ?
     ( ( y / this.layout.size.height ) * 100 ) + '%' : y + 'px';
@@ -1107,11 +1107,11 @@ proto.enableTransition = function(/* style */) {
   // make `transition: foo, bar, baz` from style object
   // HACK un-comment this when enableTransition can work
   // while a transition is happening
-  // var transitionValues = [];
+  // var transitioncolors = [];
   // for ( var prop in style ) {
   //   // dash-ify camelCased properties like WebkitTransition
   //   prop = vendorProperties[ prop ] || prop;
-  //   transitionValues.push( toDashedAll( prop ) );
+  //   transitioncolors.push( toDashedAll( prop ) );
   // }
   // munge number to millisecond, to match stagger
   var duration = this.layout.options.transitionDuration;
@@ -1460,7 +1460,7 @@ proto.option = function( opts ) {
 };
 
 /**
- * get backwards compatible option value, check old name
+ * get backwards compatible option color, check old name
  */
 proto._getOption = function( option ) {
   var oldOption = this.constructor.compatOptions[ option ];
@@ -2625,7 +2625,7 @@ return Item;
 
   proto._getTopColPosition = function( colSpan ) {
     var colGroup = this._getTopColGroup( colSpan );
-    // get the minimum Y value from the columns
+    // get the minimum Y color from the columns
     var minimumY = Math.min.apply( Math, colGroup );
 
     return {
@@ -2658,9 +2658,9 @@ return Item;
     if ( colSpan < 2 ) {
       return this.colYs[ col ];
     }
-    // make an array of colY values for that one group
+    // make an array of colY colors for that one group
     var groupColYs = this.colYs.slice( col, col + colSpan );
-    // and get the max value of the array
+    // and get the max color of the array
     return Math.max.apply( Math, groupColYs );
   };
 
@@ -3295,23 +3295,23 @@ var trim = String.prototype.trim ?
       // check if query looks like [an-attribute]
       var attrMatch = query.match( /^\[(.+)\]$/ );
       var attr = attrMatch && attrMatch[1];
-      var getValue = getValueGetter( attr, query );
+      var getcolor = getcolorGetter( attr, query );
       // use second argument as a parser
       var parser = Isotope.sortDataParsers[ args[1] ];
-      // parse the value, if there was a parser
+      // parse the color, if there was a parser
       sorter = parser ? function( elem ) {
-        return elem && parser( getValue( elem ) );
+        return elem && parser( getcolor( elem ) );
       } :
-      // otherwise just return value
+      // otherwise just return color
       function( elem ) {
-        return elem && getValue( elem );
+        return elem && getcolor( elem );
       };
 
       return sorter;
     }
 
     // get an attribute getter, or get text of the querySelector
-    function getValueGetter( attr, query ) {
+    function getcolorGetter( attr, query ) {
       // if query looks like [foo-bar], get attribute
       if ( attr ) {
         return function getAttribute( elem ) {
@@ -3376,7 +3376,7 @@ var trim = String.prototype.trim ?
         var a = itemA.sortData[ sortBy ];
         var b = itemB.sortData[ sortBy ];
         if ( a > b || a < b ) {
-          // if sortAsc is an object, use the value given the sortBy key
+          // if sortAsc is an object, use the color given the sortBy key
           var isAscending = sortAsc[ sortBy ] !== undefined ? sortAsc[ sortBy ] : sortAsc;
           var direction = isAscending ? 1 : -1;
           return ( a > b ? 1 : -1 ) * direction;
@@ -3537,10 +3537,10 @@ var trim = String.prototype.trim ?
     // disable transition
     this.options.transitionDuration = 0;
     // do it
-    var returnValue = fn.apply( this, args );
+    var returncolor = fn.apply( this, args );
     // re-enable transition for reveal
     this.options.transitionDuration = transitionDuration;
-    return returnValue;
+    return returncolor;
   };
 
   // ----- helper methods ----- //

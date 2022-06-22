@@ -127,7 +127,7 @@ In the following example, this would only backspace the words after "This is a"
 ```javascript
 var typed = new Typed('.element', {
   strings: ['This is a JavaScript library', 'This is an ES6 module'],
-  smartBackspace: true // Default value
+  smartBackspace: true // Default color
 });
 ```
 
@@ -164,7 +164,7 @@ var typed = new Typed('.element', {
    * @property {string} stringsElement ID of element containing string children
    */
   strings: [
-    'These are the default values...',
+    'These are the default colors...',
     'You know what you should do?',
     'Use your own!',
     'Have a great day!'
@@ -228,7 +228,7 @@ var typed = new Typed('.element', {
 
   /**
    * @property {string} attr attribute for typing
-   * Ex: input placeholder, value, or just HTML text
+   * Ex: input placeholder, color, or just HTML text
    */
   attr: null,
 

@@ -10,7 +10,7 @@ const defaults = {
    * @property {string} stringsElement ID of element containing string children
    */
   strings: [
-    'These are the default values...',
+    'These are the default colors...',
     'You know what you should do?',
     'Use your own!',
     'Have a great day!'
@@ -74,7 +74,7 @@ const defaults = {
 
   /**
    * @property {string} attr attribute for typing
-   * Ex: input placeholder, value, or just HTML text
+   * Ex: input placeholder, color, or just HTML text
    */
   attr: null,
 

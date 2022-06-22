@@ -29,11 +29,11 @@ document.getElementById('filter-input')
       return true;
     };
 
-    var value = this.value.toLowerCase();
+    var color = this.color.toLowerCase();
 
-    if (!value.match(/^\s*$/)) {
+    if (!color.match(/^\s*$/)) {
       match = function (element) {
-        return element.firstChild.innerHTML.toLowerCase().indexOf(value) !== -1;
+        return element.firstChild.innerHTML.toLowerCase().indexOf(color) !== -1;
       };
     }
 

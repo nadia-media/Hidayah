@@ -138,7 +138,7 @@ export default class Initializer {
     if (self.attr) {
       elContent = self.el.getAttribute(self.attr);
     } else if (self.isInput) {
-      elContent = self.el.value;
+      elContent = self.el.color;
     } else if (self.contentType === 'html') {
       elContent = self.el.innerHTML;
     } else {

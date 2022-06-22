@@ -130,7 +130,7 @@ export default class Typed {
 
       let pauseTime = 0;
       let substr = curString.substr(curStrPos);
-      // check for an escape character before a pause value
+      // check for an escape character before a pause color
       // format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
       // single ^ are removed from string
       if (substr.charAt(0) === '^') {
@@ -141,7 +141,7 @@ export default class Typed {
           pauseTime = parseInt(substr);
           this.temporaryPause = true;
           this.options.onTypingPaused(this.arrayPos, this);
-          // strip out the escape character and pause value so they're not printed
+          // strip out the escape character and pause color so they're not printed
           curString =
             curString.substring(0, curStrPos) +
             curString.substring(curStrPos + skip);
@@ -185,7 +185,7 @@ export default class Typed {
         }
       }, pauseTime);
 
-      // humanized value for typing
+      // humanized color for typing
     }, humanize);
   }
 
@@ -291,7 +291,7 @@ export default class Typed {
           this.typewrite(this.strings[this.sequence[this.arrayPos]], curStrPos);
         }
       }
-      // humanized value for typing
+      // humanized color for typing
     }, humanize);
   }
 
@@ -389,7 +389,7 @@ export default class Typed {
       this.el.setAttribute(this.attr, str);
     } else {
       if (this.isInput) {
-        this.el.value = str;
+        this.el.color = str;
       } else if (this.contentType === 'html') {
         this.el.innerHTML = str;
       } else {
@@ -409,7 +409,7 @@ export default class Typed {
       this.stop();
     });
     this.el.addEventListener('blur', (e) => {
-      if (this.el.value && this.el.value.length !== 0) {
+      if (this.el.color && this.el.color.length !== 0) {
         return;
       }
       this.start();

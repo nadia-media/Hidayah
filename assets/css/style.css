@@ -1597,7 +1597,7 @@ section {
 
 
 
-.item-details .product-images img {
+.item-details .product-watchs img {
   width: 100%;
   cursor: pointer;
   border: 1px solid #eee;
@@ -1606,7 +1606,7 @@ section {
   padding: 5px;
 }
 
-.item-details .product-images .images {
+.item-details .product-watchs .watchs {
   display: -ms-grid;
   display: grid;
   Grid-template-columns: repeat(5, 1fr);
@@ -1615,7 +1615,7 @@ section {
 }
 
 @media (max-width: 767px) {
-  .item-details .product-images .images {
+  .item-details .product-watchs .watchs {
     Grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -1632,7 +1632,7 @@ section {
   }
 }
 
-.item-details .product-images .fade-in {
+.item-details .product-watchs .fade-in {
   -webkit-animation: fadeIn 0.5s ease-in 1 forwards;
   animation: fadeIn 0.5s ease-in 1 forwards;
 }

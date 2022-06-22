@@ -1,0 +1,36 @@
+ <link href="file:///C:/Users/Nadia/Documents/Development/Templates/Hidayah/test2.css" rel="stylesheet">
+
+
+
+<div class="container">
+  <div class="card">
+ 
+
+    <img id="design_images" src="assets/img/information/wedding frame 4.png" />
+
+    <select id="DesignList">
+        <option value="assets/img/information/wedding frame 4.png">Design 1</option>
+        <option value="assets/img/information/wedding frame 1.png">Design 2</option>
+        <option value="assets/img/information/wedding frame 2.png">Design 3</option>
+        <option value="assets/img/information/wedding frame 3.png">Design 4</option>
+    </select>
+
+</div>
+
+
+
+<script>
+    function setDesign() {
+        var img = document.getElementById("design_images");
+        img.src = this.value;
+        return false;
+    }
+    document.getElementById("DesignList").onchange = setDesign;
+</script>
+
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></script> 

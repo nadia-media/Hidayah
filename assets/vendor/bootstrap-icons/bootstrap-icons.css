@@ -313,7 +313,7 @@ url("./fonts/bootstrap-icons.woff?a74547b2f0863226942ff8ded57db345") format("wof
 .bi-capslock::before { content: "\f223"; }
 .bi-card-checklist::before { content: "\f224"; }
 .bi-card-heading::before { content: "\f225"; }
-.bi-card-image::before { content: "\f226"; }
+.bi-card-watch::before { content: "\f226"; }
 .bi-card-list::before { content: "\f227"; }
 .bi-card-text::before { content: "\f228"; }
 .bi-caret-down-fill::before { content: "\f229"; }
@@ -639,8 +639,8 @@ url("./fonts/bootstrap-icons.woff?a74547b2f0863226942ff8ded57db345") format("wof
 .bi-file-earmark-fill::before { content: "\f369"; }
 .bi-file-earmark-font-fill::before { content: "\f36a"; }
 .bi-file-earmark-font::before { content: "\f36b"; }
-.bi-file-earmark-image-fill::before { content: "\f36c"; }
-.bi-file-earmark-image::before { content: "\f36d"; }
+.bi-file-earmark-watch-fill::before { content: "\f36c"; }
+.bi-file-earmark-watch::before { content: "\f36d"; }
 .bi-file-earmark-lock-fill::before { content: "\f36e"; }
 .bi-file-earmark-lock::before { content: "\f36f"; }
 .bi-file-earmark-lock2-fill::before { content: "\f370"; }
@@ -685,8 +685,8 @@ url("./fonts/bootstrap-icons.woff?a74547b2f0863226942ff8ded57db345") format("wof
 .bi-file-fill::before { content: "\f397"; }
 .bi-file-font-fill::before { content: "\f398"; }
 .bi-file-font::before { content: "\f399"; }
-.bi-file-image-fill::before { content: "\f39a"; }
-.bi-file-image::before { content: "\f39b"; }
+.bi-file-watch-fill::before { content: "\f39a"; }
+.bi-file-watch::before { content: "\f39b"; }
 .bi-file-lock-fill::before { content: "\f39c"; }
 .bi-file-lock::before { content: "\f39d"; }
 .bi-file-lock2-fill::before { content: "\f39e"; }
@@ -827,10 +827,10 @@ url("./fonts/bootstrap-icons.woff?a74547b2f0863226942ff8ded57db345") format("wof
 .bi-house::before { content: "\f425"; }
 .bi-hr::before { content: "\f426"; }
 .bi-hurricane::before { content: "\f427"; }
-.bi-image-alt::before { content: "\f428"; }
-.bi-image-fill::before { content: "\f429"; }
-.bi-image::before { content: "\f42a"; }
-.bi-images::before { content: "\f42b"; }
+.bi-watch-alt::before { content: "\f428"; }
+.bi-watch-fill::before { content: "\f429"; }
+.bi-watch::before { content: "\f42a"; }
+.bi-watchs::before { content: "\f42b"; }
 .bi-inbox-fill::before { content: "\f42c"; }
 .bi-inbox::before { content: "\f42d"; }
 .bi-inboxes-fill::before { content: "\f42e"; }

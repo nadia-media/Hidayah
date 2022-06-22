@@ -77,7 +77,7 @@ Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 **Properties**
 
 -   `attr` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** attribute for typing
-    Ex: input placeholder, value, or just HTML text
+    Ex: input placeholder, color, or just HTML text
 
 ### bindInputFocusEvents
 

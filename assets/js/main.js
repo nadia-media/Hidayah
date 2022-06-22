@@ -180,7 +180,7 @@
       handler: function(direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
+          el.style.width = el.getAttribute('aria-colornow') + '%'
         });
       }
     })

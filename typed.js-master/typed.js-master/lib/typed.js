@@ -66,10 +66,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	  color: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('color' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
@@ -101,7 +101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  _createClass(Typed, [{
 	    key: 'toggle',
-	    value: function toggle() {
+	    color: function toggle() {
 	      this.pause.status ? this.start() : this.stop();
 	    }
 	
@@ -111,7 +111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'stop',
-	    value: function stop() {
+	    color: function stop() {
 	      if (this.typingComplete) return;
 	      if (this.pause.status) return;
 	      this.toggleBlinking(true);
@@ -125,7 +125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'start',
-	    value: function start() {
+	    color: function start() {
 	      if (this.typingComplete) return;
 	      if (!this.pause.status) return;
 	      this.pause.status = false;
@@ -143,7 +143,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'destroy',
-	    value: function destroy() {
+	    color: function destroy() {
 	      this.reset(false);
 	      this.options.onDestroy(this);
 	    }
@@ -155,7 +155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'reset',
-	    value: function reset() {
+	    color: function reset() {
 	      var restart = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
 	
 	      clearInterval(this.timeout);
@@ -180,7 +180,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'begin',
-	    value: function begin() {
+	    color: function begin() {
 	      var _this = this;
 	
 	      this.options.onBegin(this);
@@ -207,7 +207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'typewrite',
-	    value: function typewrite(curString, curStrPos) {
+	    color: function typewrite(curString, curStrPos) {
 	      var _this2 = this;
 	
 	      if (this.fadeOut && this.el.classList.contains(this.fadeOutClass)) {
@@ -230,7 +230,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        var pauseTime = 0;
 	        var substr = curString.substr(curStrPos);
-	        // check for an escape character before a pause value
+	        // check for an escape character before a pause color
 	        // format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
 	        // single ^ are removed from string
 	        if (substr.charAt(0) === '^') {
@@ -241,7 +241,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            pauseTime = parseInt(substr);
 	            _this2.temporaryPause = true;
 	            _this2.options.onTypingPaused(_this2.arrayPos, _this2);
-	            // strip out the escape character and pause value so they're not printed
+	            // strip out the escape character and pause color so they're not printed
 	            curString = curString.substring(0, curStrPos) + curString.substring(curStrPos + skip);
 	            _this2.toggleBlinking(true);
 	          }
@@ -280,7 +280,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }
 	        }, pauseTime);
 	
-	        // humanized value for typing
+	        // humanized color for typing
 	      }, humanize);
 	    }
 	
@@ -292,7 +292,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'keepTyping',
-	    value: function keepTyping(curString, curStrPos, numChars) {
+	    color: function keepTyping(curString, curStrPos, numChars) {
 	      // call before functions if applicable
 	      if (curStrPos === 0) {
 	        this.toggleBlinking(false);
@@ -315,7 +315,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'doneTyping',
-	    value: function doneTyping(curString, curStrPos) {
+	    color: function doneTyping(curString, curStrPos) {
 	      var _this3 = this;
 	
 	      // fires callback function
@@ -343,7 +343,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'backspace',
-	    value: function backspace(curString, curStrPos) {
+	    color: function backspace(curString, curStrPos) {
 	      var _this4 = this;
 	
 	      if (this.pause.status === true) {
@@ -393,7 +393,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _this4.typewrite(_this4.strings[_this4.sequence[_this4.arrayPos]], curStrPos);
 	          }
 	        }
-	        // humanized value for typing
+	        // humanized color for typing
 	      }, humanize);
 	    }
 	
@@ -403,7 +403,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'complete',
-	    value: function complete() {
+	    color: function complete() {
 	      this.options.onComplete(this);
 	      if (this.loop) {
 	        this.curLoop++;
@@ -421,7 +421,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'setPauseStatus',
-	    value: function setPauseStatus(curString, curStrPos, isTyping) {
+	    color: function setPauseStatus(curString, curStrPos, isTyping) {
 	      this.pause.typewrite = isTyping;
 	      this.pause.curString = curString;
 	      this.pause.curStrPos = curStrPos;
@@ -434,7 +434,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'toggleBlinking',
-	    value: function toggleBlinking(isBlinking) {
+	    color: function toggleBlinking(isBlinking) {
 	      if (!this.cursor) return;
 	      // if in paused state, don't toggle blinking a 2nd time
 	      if (this.pause.status) return;
@@ -454,7 +454,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'humanizer',
-	    value: function humanizer(speed) {
+	    color: function humanizer(speed) {
 	      return Math.round(Math.random() * speed / 2) + speed;
 	    }
 	
@@ -464,7 +464,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'shuffleStringsIfNeeded',
-	    value: function shuffleStringsIfNeeded() {
+	    color: function shuffleStringsIfNeeded() {
 	      if (!this.shuffle) return;
 	      this.sequence = this.sequence.sort(function () {
 	        return Math.random() - 0.5;
@@ -477,7 +477,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'initFadeOut',
-	    value: function initFadeOut() {
+	    color: function initFadeOut() {
 	      var _this5 = this;
 	
 	      this.el.className += ' ' + this.fadeOutClass;
@@ -504,12 +504,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'replaceText',
-	    value: function replaceText(str) {
+	    color: function replaceText(str) {
 	      if (this.attr) {
 	        this.el.setAttribute(this.attr, str);
 	      } else {
 	        if (this.isInput) {
-	          this.el.value = str;
+	          this.el.color = str;
 	        } else if (this.contentType === 'html') {
 	          this.el.innerHTML = str;
 	        } else {
@@ -525,7 +525,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'bindFocusEvents',
-	    value: function bindFocusEvents() {
+	    color: function bindFocusEvents() {
 	      var _this6 = this;
 	
 	      if (!this.isInput) return;
@@ -533,7 +533,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this6.stop();
 	      });
 	      this.el.addEventListener('blur', function (e) {
-	        if (_this6.el.value && _this6.el.value.length !== 0) {
+	        if (_this6.el.color && _this6.el.color.length !== 0) {
 	          return;
 	        }
 	        _this6.start();
@@ -546,7 +546,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'insertCursor',
-	    value: function insertCursor() {
+	    color: function insertCursor() {
 	      if (!this.showCursor) return;
 	      if (this.cursor) return;
 	      this.cursor = document.createElement('span');
@@ -570,12 +570,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	  color: true
 	});
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('color' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -605,7 +605,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @private
 	     */
 	
-	    value: function load(self, options, elementId) {
+	    color: function load(self, options, elementId) {
 	      // chosen element to manipulate text
 	      if (typeof elementId === 'string') {
 	        self.el = document.querySelector(elementId);
@@ -727,12 +727,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, {
 	    key: 'getCurrentElContent',
-	    value: function getCurrentElContent(self) {
+	    color: function getCurrentElContent(self) {
 	      var elContent = '';
 	      if (self.attr) {
 	        elContent = self.el.getAttribute(self.attr);
 	      } else if (self.isInput) {
-	        elContent = self.el.value;
+	        elContent = self.el.color;
 	      } else if (self.contentType === 'html') {
 	        elContent = self.el.innerHTML;
 	      } else {
@@ -742,7 +742,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, {
 	    key: 'appendAnimationCss',
-	    value: function appendAnimationCss(self) {
+	    color: function appendAnimationCss(self) {
 	      var cssDataName = 'data-typed-js-css';
 	      if (!self.autoInsertCss) {
 	        return;
@@ -793,14 +793,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	  color: true
 	});
 	var defaults = {
 	  /**
 	   * @property {array} strings strings to be typed
 	   * @property {string} stringsElement ID of element containing string children
 	   */
-	  strings: ['These are the default values...', 'You know what you should do?', 'Use your own!', 'Have a great day!'],
+	  strings: ['These are the default colors...', 'You know what you should do?', 'Use your own!', 'Have a great day!'],
 	  stringsElement: null,
 	
 	  /**
@@ -860,7 +860,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  /**
 	   * @property {string} attr attribute for typing
-	   * Ex: input placeholder, value, or just HTML text
+	   * Ex: input placeholder, color, or just HTML text
 	   */
 	  attr: null,
 	
@@ -962,10 +962,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	  color: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('color' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
@@ -986,7 +986,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @private
 	     */
 	
-	    value: function typeHtmlChars(curString, curStrPos, self) {
+	    color: function typeHtmlChars(curString, curStrPos, self) {
 	      if (self.contentType !== 'html') return curStrPos;
 	      var curChar = curString.substr(curStrPos).charAt(0);
 	      if (curChar === '<' || curChar === '&') {
@@ -1017,7 +1017,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	  }, {
 	    key: 'backSpaceHtmlChars',
-	    value: function backSpaceHtmlChars(curString, curStrPos, self) {
+	    color: function backSpaceHtmlChars(curString, curStrPos, self) {
 	      if (self.contentType !== 'html') return curStrPos;
 	      var curChar = curString.substr(curStrPos).charAt(0);
 	      if (curChar === '>' || curChar === ';') {

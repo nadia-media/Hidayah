@@ -70,7 +70,7 @@ declare module 'typed.js' {
      */
     autoInsertCss?: boolean;
     /**
-     * attribute for typing Ex: input placeholder, value, or just HTML text
+     * attribute for typing Ex: input placeholder, color, or just HTML text
      */
     attr?: string;
     /**

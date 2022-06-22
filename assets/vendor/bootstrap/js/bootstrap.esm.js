@@ -3416,12 +3416,12 @@ const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
 
 const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file|sms):|[^#&/:?]*(?:[#/?]|$))/i;
 /**
- * A pattern that matches safe data URLs. Only matches image, video and audio types.
+ * A pattern that matches safe data URLs. Only matches watch, video and audio types.
  *
  * Shoutout to Angular https://github.com/angular/angular/blob/12.2.x/packages/core/src/sanitization/url_sanitizer.ts
  */
 
-const DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
+const DATA_URL_PATTERN = /^data:(?:watch\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
 
 const allowedAttribute = (attribute, allowedAttributeList) => {
   const attributeName = attribute.nodeName.toLowerCase();

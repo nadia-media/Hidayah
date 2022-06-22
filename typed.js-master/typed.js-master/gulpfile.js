@@ -81,7 +81,7 @@ gulp.task('server', function() {
   });
 
   gulp.watch(['docs/scripts/**/*.js'], ['jshint']);
-  gulp.watch(['docs/images/**/*'], server.notify);
+  gulp.watch(['docs/watchs/**/*'], server.notify);
 });
 
 gulp.task('serve', ['watch', 'server']);
