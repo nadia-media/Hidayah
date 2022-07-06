@@ -1,26 +1,37 @@
- <link href="file:///C:/Users/Nadia/Documents/Development/Templates/Hidayah/test2.css" rel="stylesheet">
+<!DOCTYPE html>
+<link href="file:///C:/Users/Nadia/Documents/Development/Templates/Hidayah/test2.css" rel="stylesheet">
 
 
 
 <div class="container">
+    
   <div class="card">
  
 
     <img id="design_images" src="assets/img/information/wedding frame 4.png" />
 
-    <select id="DesignList">
-        <option value="assets/img/information/wedding frame 4.png">Design 1</option>
-        <option value="assets/img/information/wedding frame 1.png">Design 2</option>
-        <option value="assets/img/information/wedding frame 2.png">Design 3</option>
-        <option value="assets/img/information/wedding frame 3.png">Design 4</option>
-    </select>
+  
  
 </div>
 
 
+<select id="DesignList">
+
+    
+    <option selected disabled value="default">Select a Design</option>
+    <option value="assets/img/information/wedding frame 4.png">Design 1</option>
+    <option value="assets/img/information/wedding frame 1.png">Design 2</option>
+    <option value="assets/img/information/wedding frame 2.png">Design 3</option>
+    <option value="assets/img/information/wedding frame 3.png">Design 4</option>
+</select>
+
+</div>
+
+
+
 
 <script>
-    // test on my own 
+    
     function setDesign() {
         var img = document.getElementById("design_images");
         img.src = this.value;
