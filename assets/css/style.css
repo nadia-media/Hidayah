@@ -46,6 +46,55 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+
+
+/*--------------------------------------------------------------
+# DesignList
+--------------------------------------------------------------*/
+.container {
+  margin: auto;
+  width:fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content:
+  center;align-items:
+  center;padding: 40px;
+  overflow: hidden;
+  padding: 2px 16px;
+}
+
+#DesignList {
+
+  background-color: whitesmoke;
+  color: black;
+  
+}
+
+.card {
+   /* Add shadows to create the "card" effect */
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   transition: 0.3s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width:fit-content;
+   height:fit-content;
+  border: none;
+  }
+
+   /* On mouse-over, add a deeper shadow */
+   .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  /* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+ 
+
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -155,9 +204,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.card {
-  border: none
-  }
+  
   .product {
   background-color: #eee
   }
@@ -601,6 +648,8 @@ section {
     width: 50%;
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # About
