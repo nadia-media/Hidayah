@@ -155,7 +155,22 @@ jquery/3.5.1/jquery.min.js">
   </header><!-- End Header -->
 
  
+              <script>
+                if ((".my_typed").length == 1) {
 
+                  var typed_strings = $(".data-typed-items").text();
+
+                  var typed = new Typed(".my_typed", {
+                    strings: typed_strings.split(", "),
+                    loop: true,
+                    typeSpeed: 50,
+                    backSpeed: 10,
+                    backDelay: 2000
+
+                  });
+                }
+
+              </script>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -177,22 +192,7 @@ jquery/3.5.1/jquery.min.js">
               </h2>
 
 
-              <script>
-                if ((".my_typed").length == 1) {
 
-                  var typed_strings = $(".data-typed-items").text();
-
-                  var typed = new Typed(".my_typed", {
-                    strings: typed_strings.split(", "),
-                    loop: true,
-                    typeSpeed: 50,
-                    backSpeed: 10,
-                    backDelay: 2000
-
-                  });
-                }
-
-              </script>
               
               <p class="animated fadeInUp">Brighten your decor with personalised light up frames.</p>
               <a href="lightupframes.html" class="btn-get-started animated fadeInUp scrollto">Shop Now</a>
@@ -233,7 +233,8 @@ jquery/3.5.1/jquery.min.js">
       </a>
 
     </div>
-  </section><!-- End Hero -->
+  </section>
+  <!-- End Hero -->
 
   <main id="main">
 
@@ -403,7 +404,7 @@ jquery/3.5.1/jquery.min.js">
     <!-- ======= Counts Section ======= -->
     
     <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
+      <div class="counts-container" data-aos="fade-up">
 
         <div class="row">
 
@@ -442,7 +443,8 @@ jquery/3.5.1/jquery.min.js">
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section>
+    <!-- End Counts Section -->
 
 
 
@@ -644,10 +646,8 @@ jquery/3.5.1/jquery.min.js">
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
