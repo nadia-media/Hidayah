@@ -73,156 +73,100 @@
       
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+            </nav>
+            <!-- .navbar -->
 
           </div>
           
-        </header><!-- End Header -->
-
+        </header>
+        <!-- End Header -->
 
         <!-- Product section-->
+
         <section class="py-5">
           <div class="container px-4 px-lg-5 my-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
-              <div class="col-md-6"></div>
-              <section class="item-details section">
-                  <div class="container">
-                      <div class="top-area">
-                          <div class="row align-items-center">
-                            <div class="col-lg-6 col-md-12 col-12">
-                              <div class="container">
-                                <div class="card">
-                              
-                                    <img id="design_images" src="assets/img/information/weddingframe4.png" />
+              <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" id="design_images" src="assets/img/information/weddingframe4.png" alt="..." /></div>
+                  <div class="col-md-6">
+                      <h1 class="display-5 fw-bolder">Personalised Wedding Photo Light up Frame</h1>
+                      <div class="fs-5 mb-5">
+                          <span id="price_shown">£24.99 - £28.99</span>
+                      </div>
+                      <select id="DesignList">
 
+        
+                        <option selected disabled value="default">Select a Design</option>
+                        <option value="assets/img/information/weddingframe4.png">Design 1</option>
+                        <option value="assets/img/information/weddingframe1.png">Design 2</option>
+                        <option value="assets/img/information/weddingframe2.png">Design 3</option>
+                        <option value="assets/img/information/weddingframe3.png">Design 4</option>
+                    </select>
+
+                      <br>
+                      
+
+                      <select class="my-3" id="item_price" name="item_price">
+                          <option selected disabled value="default">Select a style</option>
+                          <option value="">Frame only</option>
+                          <option value="">Bundle</option>
+                        </select>
+                      
+                      <br>
+                      <br>
+                      
+                      
+                      
+                      <div class="d-flex">
+                          <select class="form-control" id="frame_quantity" name="frame_quantity" style="max-width: 3rem">
+                              <option value="">1</option>
+                              <option value="">2</option>
+                              <option value="">3</option>
+                              <option value="">4</option>
+                              <option value="">5</option>
+                          </select>
+                          <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                              <i class="bi-cart-fill me-1"></i>
+                              Add to cart
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+      <script>
+          function setPrice(){
+            var dropdown = document.getElementById("item_price");
+            var defaultValue = "£24.99 - £28.99";
+            var selectedPrice = dropdown.options[dropdown.selectedIndex].value;
+            if (dropdown.selectedIndex == 0){
+              document.getElementById('price_shown').innerHTML = defaultValue;
+            } else if (dropdown.selectedIndex == 1){
+              document.getElementById('price_shown').innerHTML = "£24.99";
+
+            } else if (dropdown.selectedIndex == 2){
+              document.getElementById('price_shown').innerHTML = "£28.99";
+            }
+          }
+
+          document.getElementById('item_price').onchange = setPrice;
+
+          // document.write(price);
+
+        </script>
+
+
+      <script>
       
-    
-                                </div>
-                                
-                                
-                              
-                              
-                              </div>
-                              
-                              
-                              
-                              
-                            
-                              
-                              </div>
-                              
-                            </div>
-                            </div>
-                            </div>
-                            <select id="DesignList">
-
-        
-                                <option selected disabled value="default">Select a Design</option>
-                                <option value="assets/img/information/weddingframe4.png">Design 1</option>
-                                <option value="assets/img/information/weddingframe1.png">Design 2</option>
-                                <option value="assets/img/information/weddingframe2.png">Design 3</option>
-                                <option value="assets/img/information/weddingframe3.png">Design 4</option>
-                            </select>
-                            
-                            </div>
-                            
-                            </section>
-
-                            <script>
-        
-                                function setDesign() {
-                                    var img = document.getElementById("design_images");
-                                    img.src = this.value;
-                                    return false;
-                                }
-                                document.getElementById("DesignList").onchange = setDesign;
-                            </script>
-
-              <div class="col-md-6">
-                <div class="small mb-1">BundleBee Box</div>
-                <h1>Personalised Wedding Photo Light up Frame</h1>
-                <div class="fs-5 mb-5">
-                  <span id="price_shown">£24.99 - £28.99</span>
-                </div>
-                <p class="lead"></p>
-
-
-                          
-        <!-- Product details -->
-        <div class="col-lg-6 col-md-12 col-12">
-                  
-        
-            <select class="my-3" id="item_price" name="item_price">
-              <option value="">Select a style</option>
-              <option value="">Frame only</option>
-              <option value="">Bundle</option>
-            </select>
-
-            <script>
-                function setPrice(){
-                  var dropdown = document.getElementById("item_price");
-                  var defaultValue = "£24.99 - £28.99";
-                  var selectedPrice = dropdown.options[dropdown.selectedIndex].value;
-                  if (dropdown.selectedIndex == 0){
-                    document.getElementById('price_shown').innerHTML = defaultValue;
-                  } else if (dropdown.selectedIndex == 1){
-                    document.getElementById('price_shown').innerHTML = "£24.99";
-
-                  } else if (dropdown.selectedIndex == 2){
-                    document.getElementById('price_shown').innerHTML = "£28.99";
-                  }
-                }
-
-                document.getElementById('item_price').onchange = setPrice;
-
-                // document.write(price);
-
-              </script>
-            </div>
-
-
-            <div class="bcpo-label">
-                  
-                <label>
-                  <span class="bcpo-title">Please message couple name and date
-                    <br>
-                    Thank you!</span>
-                  <span class="bcpo-value"></span>
-                </label>
-                
-              </div>
-
-              <div>
-                <input type="text" name="properties[Name for personalisation]">
-              </div>
-
-              <select class="form-control" id="frame_quantity" name="frame_quantity" style="max-width: 3rem">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                <option value="">5</option>
-            </select>
-
-
-            <br>
-
-
-                <div class="d-flex">
-                  <button class="btn btn-outline-dark flex-shrink-0" type="button"> 
-                  <i class="bi-cart-fill me-1"></i>
-                  <a href="cart.html">Add to basket</a>
-                  </button>
-              </div>
-
-                <!-- End Product details -->
-
-
-                  
-        </div>
-        </div>
-        </div>
-        </section> <!-- End Product Section -->
+          function setDesign() {
+              var img = document.getElementById("design_images");
+              img.src = this.value;
+              return false;
+          }
+          document.getElementById("DesignList").onchange = setDesign;
+      </script>
+      <!-- End of Product section-->
 
 
         <!-- ======= Information Section ======= -->
@@ -322,6 +266,93 @@
             </section>
             
             <!-- End Information Section -->
+
+                 <!-- Related items section-->
+      <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="fw-bolder mb-4">Related products</h2>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/img/portfolio/printlightupframe.jpg" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Personalised Wedding Print Light up Frame</h5>
+                                <!-- Product price-->
+                                £24.99 - £28.99
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/img/portfolio/familytreeframe.png" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Personalised Family Tree Light up Frame</h5>
+                                <!-- Product price-->
+                                £24.99 - £28.99
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/img/portfolio/ramadanframe.jpg"/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Ramadan Light up Frame</h5>
+                                <!-- Product price-->
+                                £24.99 - £28.99
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/img/portfolio/umrahframe.png" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Personalised Umrah Light up Frame</h5>
+                                <!-- Product price-->
+                                £24.99 - £28.99
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- End of Related items section-->
 
 
             <main id="main">
