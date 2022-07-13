@@ -13,6 +13,10 @@ body {
   color: #444444;
 }
 
+/*------------------------------------------------------------------
+[ Slick2 ]*/
+.slick-slide {outline: none !important;}
+
 
 
 .text-slider-items {
@@ -789,60 +793,52 @@ section {
     opacity: 0;
   }
 }
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts {
-  padding: 80px 0 60px 0;
-}
-.counts .counters span {
-  font-size: 48px;
-  display: block;
-  color: #e3c89c;
-  font-weight: 700;
-}
-.counts .counters p {
-  padding: 0;
-  margin: 0 0 20px 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-}
 
 /*--------------------------------------------------------------
-# Skills
+# Facts Counts
 --------------------------------------------------------------*/
-.skills {
-  padding-top: 0;
+.facts .count-box {
+  padding: 30px 30px 25px 30px;
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
 }
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+.facts .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #e3c89c;
+  color: #fff;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
 }
-.skills .progress .skill {
-  padding: 10px 0;
-  margin: 0;
-  text-transform: uppercase;
+.facts .count-box span {
+  font-size: 36px;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #394047;
+  color: #011426;
 }
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.facts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
 }
-.skills .progress-bar-wrap {
-  background: #e3e6e9;
-}
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #e3c89c;
-}
+
+
+/*--------------------------------------------------------------
+# End of Facts Counts
+--------------------------------------------------------------*/
+
+
 
 /*--------------------------------------------------------------
 # Services
@@ -1691,4 +1687,6 @@ section {
     margin-top: 30px;
   }
 }
+
+
 
